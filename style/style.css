@@ -185,11 +185,6 @@ a:hover{
     color: white;
 }
 
-
-#plannerContainer{
-    background-color: blue;
-}
-
 /*stylowanie exchangeMoney*/
 
 .currencyContainer {
@@ -288,4 +283,49 @@ tr:hover {
 .calculator > input {
     height: 4vh;
     /*width: auto;*/
+}
+
+#result {
+    background-color: #d9edf7;
+    color: black;
+    text-align: center;
+}
+
+.calculator > select {
+    color: black;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* stylowanie plannerContainer*/
+
+.plannerMainContener {
+    display: flex; /*dzieci ustawiają się obok siebie*/
+    background-color: #2A3E5C;
+    height: auto;
+    min-height: 90vh;
+}
+
+#map {
+    width: 70%;
+}
+
+#plannerContainer {
+    width: 30%;
+}
+
+@media screen and (max-width: 720px) {
+    .plannerMainContener {
+        flex-direction: column; /*dzieci ustawiają się pod sobą*/
+    }
+    #map {
+        width: 100%;
+    }
+    #plannerContainer {
+        width: 100%;
+    }
+
 }
