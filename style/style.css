@@ -64,14 +64,21 @@
     background-image: url("../images/btn_google+_light_normal_ios@3x.png");
     width: 483px;
     height: 100%;
-    background-position: center top 7vh;
+    background-position: left top 7vh;
     background-repeat: no-repeat;
-    background-size: 15vh;
+    background-size: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: inherit;
     cursor: pointer;
     transition-duration: 0.4s;
     float: left;
+}
+
+.googleLog > button {
+    height: 5vh;
+    position: center;
+    margin-top: 17%;
+    margin-left: 30%;
 }
 
 .planner {
@@ -127,10 +134,13 @@
     .googleLog{
         width: 100%;
         background-image: url("../images/btn_google+_light_normal_ios@3x.png");
-        background-position: left;
+        background-position: right;
         background-repeat: no-repeat;
         background-size: 7vh;
         transition-duration: 0.4s;
+    }
+    .googleLog > button{
+        margin-top: 3%;
     }
     .planner{
         width: 100%;
@@ -225,7 +235,8 @@ a:hover{
     /*height: 40vh;*/
     background-color: #d9edf7;
     border: 1px solid white;
-    margin-left: 50vh;
+    margin-left: 20vh;
+
 }
 
 @media screen and (max-width: 720px) {
@@ -233,6 +244,7 @@ a:hover{
         width: 100%;
         align-items: center;
         margin-left: 5vh;
+        margin-bottom: 2vh;
     }
 }
 
@@ -240,7 +252,8 @@ a:hover{
     font-size: larger;
     font-weight: bolder;
     color: white;
-    margin-left: 50vh;
+    margin-left: 20vh;
+    margin-top: 5vh;
 }
 @media screen and (max-width: 720px) {
     .tableName{
@@ -250,7 +263,7 @@ a:hover{
 
 
 .theadTable {
-    background-color: #337ab7;
+    background-color: #46b8da;
     color: white;
 }
 
@@ -262,6 +275,7 @@ tr:hover {
 /*stylowanie kalkulatora*/
 
 .calculator {
+    width: 40%;
     margin-top: 20vh;
     /*position: absolute;*/
     /*display: inline-block;*/
@@ -270,6 +284,7 @@ tr:hover {
     padding: 6px 12px;
     line-height: 1.42857143;
     color: #fff;
+    margin-left: 20vh;
 }
 
 .calculatorTitle {
@@ -278,7 +293,25 @@ tr:hover {
     font-size: x-large;
     padding-top: 6vh;
     color: white;
+    margin-bottom: 5vh;
 }
+
+.convertButton {
+    font-size: 0.8em;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    padding: 5px 5px;
+    line-height: 1.42857143;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    width: 40%;
+    align-content: center;
+    /*margin-top: 10%;*/
+    margin-left: 15%;
+}
+
 
 .calculator > input {
     height: 4vh;
@@ -289,6 +322,7 @@ tr:hover {
     background-color: #d9edf7;
     color: black;
     text-align: center;
+    border-radius: 4px;
 }
 
 .calculator > select {
@@ -300,6 +334,34 @@ tr:hover {
     user-select: none;
 }
 
+#amount{
+    height: 4vh;
+    width: 20%;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#amount:focus{
+    outline: none !important;
+    border-color: #46b8da;
+    box-shadow: 0 0 12px #719ECE;
+}
+
+@media screen and (max-width: 720px){
+    .convertButton {
+        margin-left: 0.5vh;
+        margin-top: 2vh;
+    }
+    #amount{
+        margin-left: 3vh;
+        width: 80%;
+    }
+}
+
+/*#exchangeContainer {*/
+    /*width: 50%;*/
+/*}*/
+
 /* stylowanie plannerContainer*/
 
 .plannerMainContener {
@@ -310,11 +372,68 @@ tr:hover {
 }
 
 #map {
-    width: 70%;
+    width: 80%;
 }
 
 #plannerContainer {
-    width: 30%;
+    width: 20%;
+}
+
+.infoMaps {
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.startPlace, .finishPlace {
+    margin-left: 5vh;
+    font-size: 1.5em;
+    line-height: 1.42857143;
+    color: #fff;
+}
+
+#startInput, #endInput {
+    margin-left: 3vh;
+    height: 4vh;
+    width: 80%;
+    border-radius: 4px;
+}
+
+#startInput:focus{
+    outline: none !important;
+    border-color: #46b8da;
+    box-shadow: 0 0 12px #719ECE;
+}
+
+#endInput:focus{
+    outline: none !important;
+    border-color: #46b8da;
+    box-shadow: 0 0 12px #719ECE;
+}
+/*#endInput {*/
+    /*margin-left: 3vh;*/
+    /*height: 4vh;*/
+    /*width: 80%;*/
+    /*border-radius: 4px;*/
+/*}*/
+
+#calculateRoute{
+    font-size: 1em;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    padding: 10px 10px;
+    line-height: 1.42857143;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    width: 60%;
+    align-content: center;
+    margin-top: 10%;
+    margin-left: 15%;
 }
 
 @media screen and (max-width: 720px) {
@@ -323,9 +442,61 @@ tr:hover {
     }
     #map {
         width: 100%;
+        height: 60vh; /*musi być wysokość zeby mapa była widoczna*/
     }
     #plannerContainer {
         width: 100%;
     }
+    .fromPlace {
+        text-align: center;
+        width: 100%;
+    }
+    .toPlace {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+    #calculateRoute {
+        margin-left: 25%;
+        /*margin-top: 1vh;*/
+    }
 
 }
+
+.textPlan, .readyInfo {
+    text-align: center;
+    font-family: "Lohit Bengali";
+    font-weight: bolder;
+    font-size: x-large;
+    padding-top: 6vh;
+    color: white;
+}
+
+/*logowanie*/
+
+
+.showMe {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    width: 100%; !important;
+    height: 100%;
+    padding: 25%;
+    text-align: center;
+    background: lightgreen;
+    font-size: 20px;
+}
+
+.niceLog {
+    position: center;
+}
+/*margin-left: auto;*/
+/*margin-right: auto;*/
+/*position: fixed;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*text-align: center;*/
+/*background: lightgreen;*/
+/*font-size: 20px;*/
