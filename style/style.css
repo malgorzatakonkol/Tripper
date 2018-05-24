@@ -267,9 +267,13 @@ a:hover{
     color: white;
 }
 
-tr:hover {
+.table tbody tr:hover {
     background-color: white;
     cursor: pointer;
+}
+
+th:hover{
+
 }
 
 /*stylowanie kalkulatora*/
@@ -483,10 +487,15 @@ tr:hover {
     justify-content: center;
     width: 100%; !important;
     height: 100%;
-    padding: 25%;
+    padding: 10%;
     text-align: center;
-    background: lightgreen;
-    font-size: 20px;
+    background: white;
+    font-size: 50px;
+    color: black;
+    font-family: 'VT323', monospace;
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+
 }
 
 .niceLog {
