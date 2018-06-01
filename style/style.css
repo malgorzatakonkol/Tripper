@@ -108,18 +108,6 @@
     background-color: #478DFF;
 }
 
-/*.planner:hover {*/
-    /*color: white;*/
-    /*font-weight: bolder;*/
-    /*background-color: #478DFF;*/
-/*}*/
-
-/*.exchange:hover {*/
-    /*color: white;*/
-    /*font-weight: bolder;*/
-    /*background-color: #478DFF;*/
-/*}*/
-
 @media screen and (max-width: 720px) { /*zmiana logo na małe*/
     .menu {
         flex-direction: column;
@@ -152,23 +140,6 @@
         transition-duration: 0.4s;
     }
 }
-
-/*@media screen and (max-width: 720px) {*/
-    /*.googleLog{*/
-        /*width: 100%;*/
-    /*}*/
-/*}*/
-/*@media screen and (max-width: 720px) {*/
-    /*.planner{*/
-        /*width: 100%;*/
-    /*}*/
-/*}*/
-/*@media screen and (max-width: 720px) {*/
-    /*.exchange{*/
-        /*width: 100%;*/
-    /*}*/
-/*}*/
-
 
 .text {
     font-size: 1em;
@@ -299,6 +270,12 @@ a:hover{
     margin-left: 15%;
 }
 
+.convertButton:focus{
+    outline: none !important;
+    border-color: #46b8da;
+    box-shadow: 0 0 5px #719ECE;
+}
+
 .calculator > input {
     height: 4vh;
 }
@@ -400,12 +377,6 @@ a:hover{
     border-color: #46b8da;
     box-shadow: 0 0 12px #719ECE;
 }
-/*#endInput {*/
-    /*margin-left: 3vh;*/
-    /*height: 4vh;*/
-    /*width: 80%;*/
-    /*border-radius: 4px;*/
-/*}*/
 
 #calculateRoute{
     font-size: 1em;
@@ -421,6 +392,12 @@ a:hover{
     align-content: center;
     margin-top: 10%;
     margin-left: 15%;
+}
+
+#calculateRoute:focus{
+    outline: none !important;
+    border-color: #46b8da;
+    box-shadow: 0 0 5px #719ECE;
 }
 
 @media screen and (max-width: 720px) {
