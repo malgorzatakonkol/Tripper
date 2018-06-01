@@ -16,8 +16,6 @@ export default class LoginMenu extends React.Component {
 
 
    responseGoogle = (response) => {
-        // const result= response;
-        // console.log("mam to", response.getName());
         let profile = response.getBasicProfile();
         let nameProfil = profile.getName();
         console.log(nameProfil);

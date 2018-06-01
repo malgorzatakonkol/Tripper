@@ -15,4 +15,4 @@ export default class ExchangeMenu extends React.Component {
     }
 }
 
-// nav link do podstrony
+

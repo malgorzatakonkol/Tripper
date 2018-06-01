@@ -17,9 +17,9 @@ export default class ExchangeContainer extends React.Component {
     handleClick (){
         let selectedFrom = document.getElementById("currencyFrom");
         let selectedTo = document.getElementById("currencyTo");
-        let valueFrom = selectedFrom.options[selectedFrom.selectedIndex].value;//pobranie zawartości z options
+        let valueFrom = selectedFrom.options[selectedFrom.selectedIndex].value;
         let valueTo = selectedTo.options[selectedTo.selectedIndex].value;
-        let amount = document.getElementById("amount").value;//pobranie zawartości inputa
+        let amount = document.getElementById("amount").value;
         let resultElement = document.getElementById("result");
         let result = Number(amount) * (Number(valueFrom)/Number(valueTo));
         resultElement.innerHTML = result.toFixed(2);
@@ -34,7 +34,7 @@ export default class ExchangeContainer extends React.Component {
 
     render(){
 
-        if(this.state.data.length > 0) { //jezeli zawiera jakies dane //d to jest obiekt który zawiera wszystkie  elementy
+        if(this.state.data.length > 0) {
             const symbol = this.state.data.map( (d,i) => <tr key={i}><td>{ d.code }</td><td>{d.currency}</td><td>{d.mid}</td></tr>);
             const selectValue = this.state.data.map( (d,i) => <option key={d.mid} value = {d.mid}>{d.currency}</option>);
             selectValue.unshift(<option key={"zloty"} value ={1}>PLN - polski złoty</option>);

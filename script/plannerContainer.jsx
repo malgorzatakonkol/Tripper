@@ -10,12 +10,12 @@ export default class PlannerContainer extends React.Component {
         let elementID = event.target.getAttribute("id");
     if(elementID === "startInput"){
             this.setState({
-                start: event.target.value, //wartość formularza
+                start: event.target.value,
             })
         }
         else if(elementID === "endInput"){
         this.setState({
-            end: event.target.value, //wartość formularza
+            end: event.target.value,
         })
     }
 
@@ -82,11 +82,7 @@ export default class PlannerContainer extends React.Component {
 
 
         function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-            // var waypts = [];
-            // waypts.push({
-            //     location: "warszawa",
-            //     stopover: true
-            // });
+
 
             directionsService.route({
                 origin: document.getElementById('startInput').value,
@@ -116,7 +112,6 @@ export default class PlannerContainer extends React.Component {
 
 
         componentDidMount () {
-            // this.initMaps();
                 this.id = setInterval(()=> { //sprawdzamy czy mapa sie załadowała
                     if(google && 'maps' in google){
                         clearInterval(this.id);
