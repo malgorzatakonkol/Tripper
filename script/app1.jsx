@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 <div>
                     <NavLink exact to="/"><img src="images/logo4.png" className="logo"></img></NavLink>
 
-                        <Route exact path="/" component={ Home}/> {/* dwa kopmponenty do jednogo przy route*/}
+                        <Route exact path="/" component={ Home}/>
                         <Route exact path="/planner" component={ PlannerContainer }/>
                         <Route exact path="/exchange" component={ ExchangeContainer }/>
                     <Menu/>
